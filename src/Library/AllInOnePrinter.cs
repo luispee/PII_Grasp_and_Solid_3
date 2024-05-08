@@ -1,4 +1,6 @@
-//---------------------------------------------------------------------------------
+//OBSOLETE
+
+/* //---------------------------------------------------------------------------------
 // <copyright file="AllInOnePrinter.cs" company="Universidad Católica del Uruguay">
 // Copyright (c) Programación II. Derechos reservados.
 // </copyright>
@@ -20,7 +22,7 @@ namespace Full_GRASP_And_SOLID.Library
         {
             if (destination == Destination.Console)
             {
-                Console.WriteLine(recipe.GetTextToPrint());
+                
             }
             else
             {
@@ -28,4 +30,4 @@ namespace Full_GRASP_And_SOLID.Library
             }
         }
     }
-}
+} */

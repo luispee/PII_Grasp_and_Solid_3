@@ -26,9 +26,11 @@ namespace Full_GRASP_And_SOLID
             recipe.AddStep(new Step(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120));
             recipe.AddStep(new Step(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60));
 
-            AllInOnePrinter printer = new AllInOnePrinter();
-            printer.PrintRecipe(recipe, Destination.Console);
-            printer.PrintRecipe(recipe, Destination.File);
+            //Para implementar la responsabilidad de imprimir en diferentes destinos aplico el patrón de polimorfismo en el método PrintRecipe, y el principio de Liskov se aplica para las impresoras, ya que son subtipos de Printer puedo substituir Console y Txt printers indistintamente.
+            IPrinter printer = new ConsolePrinter();
+            printer.PrintRecipe(recipe);
+            printer = new TxtPrinter();
+            printer.PrintRecipe(recipe);
         }
 
         private static void PopulateCatalogs()
